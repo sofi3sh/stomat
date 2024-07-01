@@ -176,3 +176,24 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+
+/* =============================================================================== */
+                              /* Підключення стилів */
+/* =============================================================================== */
+
+function add_style() {
+    wp_enqueue_style('custom-style', get_stylesheet_directory_uri() . '/style.css');
+	wp_enqueue_style('krona-one', 'https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+}
+add_action('wp_enqueue_scripts', 'add_style');
+
+function add_gradient_background() {
+    echo '<style>
+    body {
+        background: linear-gradient(to right, #F8F3F0, #F4F7FA);
+    }
+    </style>';
+}
+add_action('wp_head', 'add_gradient_background');
+
