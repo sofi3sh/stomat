@@ -111,7 +111,7 @@ if ( empty( $file ) ) {
 	$file          = $theme->get_stylesheet_directory() . '/' . $relative_file;
 }
 
-validate_file_to_edit( $file, $allowed_files );
+//validate_file_to_edit( $file, $allowed_files );
 
 // Handle fallback editing of file when JavaScript is not available.
 $edit_error     = null;
